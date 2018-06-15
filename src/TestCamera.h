@@ -10,6 +10,7 @@
 
 
 #include <SDL.h>
+#include <SDL_keysym.h>
 
 #include "Simulation.h"
 

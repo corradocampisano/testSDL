@@ -1,4 +1,4 @@
-src/TestCamera.d: ../src/TestCamera.cpp ../src/TestCamera.h \
+src/TestCamera.o: ../src/TestCamera.cpp ../src/TestCamera.h \
  /usr/include/SDL/SDL.h /usr/include/SDL/SDL_main.h \
  /usr/include/SDL/SDL_stdinc.h /usr/include/SDL/SDL_config.h \
  /usr/include/SDL/SDL_platform.h /usr/include/SDL/begin_code.h \
@@ -12,8 +12,8 @@ src/TestCamera.d: ../src/TestCamera.cpp ../src/TestCamera.h \
  /usr/include/SDL/SDL_video.h /usr/include/SDL/SDL_joystick.h \
  /usr/include/SDL/SDL_quit.h /usr/include/SDL/SDL_loadso.h \
  /usr/include/SDL/SDL_timer.h /usr/include/SDL/SDL_version.h \
- ../src/Simulation.h ../src/Being.h /usr/include/GL/gl.h \
- /usr/include/GL/glu.h
+ /usr/include/SDL/SDL_keysym.h ../src/Simulation.h ../src/Being.h \
+ /usr/include/GL/gl.h /usr/include/GL/glu.h
 
 ../src/TestCamera.h:
 
@@ -68,6 +68,8 @@ src/TestCamera.d: ../src/TestCamera.cpp ../src/TestCamera.h \
 /usr/include/SDL/SDL_timer.h:
 
 /usr/include/SDL/SDL_version.h:
+
+/usr/include/SDL/SDL_keysym.h:
 
 ../src/Simulation.h:
 

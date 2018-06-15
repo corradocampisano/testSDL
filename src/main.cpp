@@ -1,11 +1,11 @@
 
-#include </usr/include/xercesc/util/PlatformUtils.hpp>
-#include </usr/include/xercesc/dom/DOM.hpp>
+//#include </usr/include/xercesc/util/PlatformUtils.hpp>
+//#include </usr/include/xercesc/dom/DOM.hpp>
 // Other include files, declarations, and non-Xerces-C++ initializations.
 
 #include "TestCamera.h"
 
-using namespace xercesc;
+//using namespace xercesc;
 
 int main(int argc, char* argv[]) {
 

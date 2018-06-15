@@ -7,7 +7,8 @@
 
 #include "TestCamera.h"
 
-#include <cstdlib>
+//#include <cstdlib>
+#include <ctgmath>
 
 #include <iostream>
 #include <string>
@@ -311,7 +312,13 @@ void TestCamera::draw_screen() {
 
 	static GLubyte lightGray[] = { 100, 100, 100, 100 };
 	static GLubyte darkGray[] = { 40, 40, 40, 120 };
-	double zoom = abs(distance);
+
+	// this showed "call of overloaded ‘abs(GLfloat&)’ is ambiguous" since debian9 (not on debian8)
+	//double zoom = abs(distance);
+	// see: https://stackoverflow.com/questions/1374037/ambiguous-overload-call-to-absdouble
+	// solved by using fabs() and including "#include <ctgmath>" and instead of "#include <cstdlib>"?
+	double zoom = fabs(distance);
+
 
 	glBegin(GL_LINES);
 
@@ -358,7 +365,7 @@ void TestCamera::draw_things() {
 	for (unsigned i = 0; i < beings.size(); i++) {
 		Being being = beings.at(i);
 
-		double zoom = abs(distance);
+		double zoom = fabs(distance);
 
 		// draw acceleration
 		glBegin(GL_LINES);
